@@ -8,8 +8,7 @@ const { dbGet, dbAll, dbRun, init } = require('./database');
 const app = express();
 const PORT = process.env.PORT || 5000;
 const JWT_SECRET = process.env.JWT_SECRET;
-
-app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
+app.use(cors({ origin: process.env.ALLOW_ORIGIN?.split(','), credentials: true }));
 app.use(express.json());
 
 // ===== MIDDLEWARE =====
