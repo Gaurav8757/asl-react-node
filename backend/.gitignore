@@ -1,0 +1,12 @@
+node_modules
+dist
+.env
+.env.example
+.env.local
+.env.development
+.env.test
+.env.production
+coverage
+logs
+*.log
+
